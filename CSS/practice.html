@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas Bezier Curves</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #ff0000; background-color: rgb(199, 98, 98);"></canvas>
+    <script>
+        function draw() {
+            var c = document.getElementById('myCanvas');
+            if (c.getContext) {
+                var ctx = c.getContext('2d');
+
+                ctx.beginPath();
+                ctx.moveTo(200, 20);
+                ctx.bezierCurveTo(130, 20, 130, 100, 180, 100);
+                ctx.moveTo(200, 20);
+                ctx.bezierCurveTo(150, 20, 150, 100, 180, 100);
+                ctx.stroke();
+            }
+        }
+        draw();
+    </script>
+</body>
+
+</html>

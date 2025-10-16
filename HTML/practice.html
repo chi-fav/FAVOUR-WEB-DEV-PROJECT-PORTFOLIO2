@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.2.0-web/css/all.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>DivineFave's Visual Odyssey</title>
+    <link rel="stylesheet" href="../CSS/style1.css">
+</head>
+<style>
+    :root {
+        --primary-color: #3b0432;
+        --secondary-color: #e122e7;
+        --border-radius-circle: 50%;
+        --border-radius-normal: 7px;
+        --trans-secondary-color: rgba(225, 34, 231, 0.07);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+
+    body {
+        background-color: white;
+        font-family: 'Raleway', sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 22fr;
+        grid-template-rows: 100vh;
+
+    }
+
+    nav {
+        background-color: var(--primary-color);
+        position: fixed;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 130PX;
+        padding: 30px 5px;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        grid-column: 1;
+        z-index: 1000;
+
+
+    }
+
+    main {
+        grid-column: 2;
+        overflow-y: auto;
+    }
+
+    #logo {
+        width: 70%;
+    }
+
+    #logo img {
+        width: 100%;
+    }
+
+    #contactus ul {
+        list-style-type: none;
+    }
+
+    #navbtn {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        height: 6rem;
+    }
+
+    #menu {
+        font-size: 0.85rem;
+        color: white;
+        transform: translateY(-10%);
+        /* margin-bottom: 0.5rem; */
+        text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+        visibility: hidden;
+        top: -36px;
+        /* position: absolute; */
+
+    }
+
+    #navbtn:hover>#menu {
+        visibility: visible;
+        top: 36px;
+        transition: all .7s;
+    }
+
+    #navbtn span {
+        width: 100%;
+        align-self: center;
+        background-color: white;
+        height: 0.2rem;
+        z-index: 10;
+    }
+
+    .socialm {
+        margin: 2px;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: var(--border-radius-circle);
+        padding: 5px;
+        width: 28px;
+        height: 28px;
+        align-self: center;
+        justify-self: center;
+        font-size: 13px;
+        color: var(--primary-color);
+        margin: 5px;
+    }
+
+    #contactus ul {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .fa-facebook-f {
+        padding: 5px 3px 3px 7px;
+    }
+
+    /* HEADER STYLE */
+    header {
+        background-image: url("../MEDIA/IMAGES/small.png");
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-size: 7208.16px 600px;
+        /* Adjust the size to match your sprite sheet */
+        background-position: cover ;
+        /* Initial frame */
+        transition: background-position 0.8s ease-in-out;
+        /* Add a smooth transition effect */
+        height: 600px;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        background-color: var(--primary-color);
+
+    }
+
+    #intro {
+        color: #fff;
+        margin-left: 80px;
+        margin-top: 40px;
+        text-align: left;
+    }
+
+    #intro p {
+        font-style: italic;
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #intro h1 {
+        font-weight: 900;
+        font-size: 50px;
+    }
+
+    #intro h2 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    #startbtn {
+        margin-top: 30px;
+        padding: 13px;
+        width: 15%;
+        background-color: white;
+        color: var(--primary-color);
+        border-radius: 7px;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #slidebtn {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 83%;
+        padding: 10px;
+        position: relative;
+        top: 100px;
+        margin-bottom: none;
+    }
+
+    .fa-solid {
+        background-color: white;
+        font-size: 17px;
+        padding: 10px;
+        border-radius: var(--border-radius-normal);
+        color: #53010F;
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <a id="logo" href="index.html"><img src="../MEDIA/IMAGES/DIVINE FAVOUR LOGO white.png" alt=""></a>
+
+
+        <div id="navbtn">
+            <div id="menu">Menu</div>
+            <span id="top-line"></span>
+            <span id="middle-line"></span>
+            <span id="bottom-line"></span>
+        </div>
+
+        <div id="contactus">
+            <ul>
+                <li><a href="whatsapp://send?phone=+2348073933816" target="_blank"><i
+                            class="fab fa-whatsapp socialm"></i></a></li>
+                <li><a href="mailto:chilotamfaour816@gmail.com" target="_blank"><i
+                            class="fas fa-envelope socialm"></i></a></li>
+                <li><a href="https://www.facebook.com/Favour Chilotam" target="_blank"><i
+                            class="fab fa-facebook-f socialm"></i></a></li>
+                <li><a href="https://twitter.com/Favour Chilotam" target="_blank"><i
+                            class="fab fa-twitter socialm"></i></a></li>
+                <li><a href="https://www.pinterest.com/Favour Chilotam" target="_blank"><i
+                            class="fab fa-pinterest socialm"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header>
+            <section id="intro">
+                <p>Explore DivineFave's Visual Odyssey: Where Creativity Flourishes and Imagination Soars.</p>
+                <h1>Welcome</h1>
+                <h2>I am Divine Favour Chilotam, my creative space, where the extraordinary becomes reality.</h2>
+                <a href="#internalinkbar" target="_self"><button id="startbtn">LET'S START</button></a>
+            </section>
+
+            <div id="slidebtn">
+                <i class="fa-solid fa-angle-left"></i>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+
+        </header>
+    </main>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        
+        
+
+
+        let currentIndex = 0;
+
+        function slideshowright() {
+            currentIndex++;
+            if (currentIndex >= 6) { /* Assuming 6 frames in the sprite sheet */
+                currentIndex = currentIndex-1;
+            }
+            const frameWidth = 1201.36; /* Width of a single frame */
+            const newBackgroundPosition = -currentIndex * frameWidth;
+            $("header").css("background-position", newBackgroundPosition + "px 0");
+        }
+
+        function slideshowleft() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = 5; /* Assuming 6 frames in the sprite sheet */
+            }
+            const frameWidth = 1201.36; /* Width of a single frame */
+            const newBackgroundPosition = -currentIndex * frameWidth;
+            $("header").css("background-position", newBackgroundPosition + "px 0");
+        }
+
+        if (currentIndex <= 6) { 
+            window.setInterval(slideshowright, 6500);
+            }
+        else{
+            window.setInterval(slideshowleft, 6500);
+
+        }
+
+
+
+
+        document.querySelector(".fa-angle-right").onclick = slideshowright;
+        document.querySelector(".fa-angle-left").onclick = slideshowleft;
+
+
+    </script>
+
+</body>
+
+</html>

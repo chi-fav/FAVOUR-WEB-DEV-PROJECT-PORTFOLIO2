@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit Evaluation Version) -->
+<?xml-stylesheet href="shape 1.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="3.50961in" height="3.50961in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 664.09 664.09"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+   <clipPath id="id0">
+    <path d="M332.04 0c183.38,0 332.04,148.66 332.04,332.04 0,183.38 -148.66,332.04 -332.04,332.04 -183.38,0 -332.04,-148.66 -332.04,-332.04 0,-183.38 148.66,-332.04 332.04,-332.04z"/>
+   </clipPath>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M332.04 0c183.38,0 332.04,148.66 332.04,332.04 0,183.38 -148.66,332.04 -332.04,332.04 -183.38,0 -332.04,-148.66 -332.04,-332.04 0,-183.38 148.66,-332.04 332.04,-332.04z"/>
+  <g style="clip-path:url(#id0)">
+   <g id="_2596622026848">
+    <path id="_1" class="fil1" d="M332.04 332.04l0 332.04c-183.38,0 -332.04,-148.66 -332.04,-332.04 0,-183.38 148.66,-332.04 332.04,-332.04 183.38,0 332.04,148.66 332.04,332.04l-332.04 0z"/>
+    <circle class="fil2" cx="332.04" cy="332.04" r="151.24"/>
+   </g>
+  </g>
+  <path class="fil3" d="M332.04 0l183.38 0c148.66,148.66 148.66,332.04 148.66,515.42 -148.66,148.66 -332.04,148.66 -515.42,148.66 -148.66,-148.66 -148.66,-332.04 -148.66,-515.42l148.66 -148.66c-148.66,148.66 0,0 183.38,0z"/>
+ </g>
+</svg>
