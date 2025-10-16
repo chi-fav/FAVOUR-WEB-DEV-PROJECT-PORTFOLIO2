@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Functions</title>
+</head>
+<body>
+    <script>
+        //0-11, goodmorning
+        // 12 - 16, good afternoon
+        // 17-23, godd evening
+        function greet(username, hour)
+        {
+            if (hour >= 0 && hour <= 11 )
+            {
+                console.log(`Goodmorning ${username}!`);
+            }
+
+            else if (hour >= 12 && hour <= 16 )
+            {
+                console.log(`Goodafternoon ${username}!`);
+            }
+
+            else if (hour >= 17 && hour <= 23 )
+            {
+                console.log(`Goodevening ${username}!`);
+            }
+           
+        }
+
+        greet("Jenny",11);
+
+        function max(num1,num2,num3)
+        {
+            return Math.max(num1,num2,num3)
+        }
+        let largest = max(34,89,21)
+        console.log("Largest number is", largest)
+    </script>
+    
+</body>
+</html>

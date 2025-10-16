@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <style>
+        /* css comment here */
+        h1{
+            color:rgb(255, 255, 255);
+            background-color:purple;
+            opacity: 1;
+        }
+        
+        #intro{
+            color: rgb(255, 70, 0)
+        }
+
+        .note{
+            color:  #0f6b07
+        }
+
+        P> q{
+            background-color: lightblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to CSS Styling</h1>
+    <p id="intro">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, 
+        velit expedita? Aliquid minus accusamus perferendis molestiae 
+        ut unde numquam <span class="note">expedita quibusdam</span> voluptates architecto, expedita quibusdam 
+        doloremque a nemo labore similique et ipsa.
+    </p>
+    
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, 
+        velit expedita? Aliquid minus accusamus perferendis molestiae 
+        ut unde numquam voluptates architecto, <span class="note">amet consectetur</span>expedita quibusdam doloremque a nemo labore similique et ipsa.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, 
+        velit expedita? Aliquid minus accusamus perferendis molestiae 
+        ut unde numquam voluptates architecto, <q class="note">perferendis molestiae</q>expedita quibusdam doloremque a nemo labore similique et ipsa.
+    </p>
+</body>
+</html>

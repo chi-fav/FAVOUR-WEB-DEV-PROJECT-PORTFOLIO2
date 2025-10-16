@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Danne's Pastries</title>
+
+	<link rel="stylesheet" href="css/fontawesome-free-6.2.0-web/css/all.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	
+</head>
+<body>
+	//U GUYS ARE NOT SERIOUS
+	<section id="pickUpLink">
+		<div class="container">
+			<a href="#">ORDER DESSERTS FOR LOCAL PICK UP</a>
+		</div>
+	</section>
+
+	<nav id="main">
+		<div class="container">
+			<section>
+				<a href="#" class="nav-links">
+					Order Online 
+					<i class="fa-solid fa-angle-down"></i>
+				</a>
+				<a href="#" class="nav-links">
+					Grocery
+					<i class="fa-solid fa-angle-down"></i>
+				</a>
+				<a href="#" class="nav-links">
+					Visit Us
+					<i class="fa-solid fa-angle-down"></i>
+				</a>
+			</section>
+			<section>
+				<a href="#" class="nav-links">
+					About Us
+					<i class="fa-solid fa-angle-down"></i>
+				</a>
+				<div id="puddingClubLink">
+					<a href="#">Pudding Club</a>
+				</div>
+				<div class="icons">
+					<span>
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</span>
+					<a href="#">
+						<i class="fa-regular fa-user"></i>
+					</a>
+					<span id="cartBtn">
+						<i class="fa-solid fa-cart-shopping"></i>
+					</span>
+				</div>
+			</section>
+			<a href="index.html" class="logo">
+				<img src="images/logo.svg" alt="Danne's Pastries logo">
+			</a>
+		</div>
+	</nav>
+
+	<main>
+		<div class="container">
+			<section id="categories">
+				<h2>Categories</h2>
+				<ul></ul>
+			</section>
+			<section id="catalog"></section>
+		</div>
+	</main>
+
+	<section id="cart">
+		<span class="close-btn">
+			<i class="fa-solid fa-xmark"></i>
+		</span>
+		<header>
+			<h2>Your items</h2>
+			<span id="cartTotal">NGN 0.00</span>
+		</header>
+		
+		<div id="cartItems">
+			<div class="cart-item">
+				<div class="img-container">
+					<img src="images/1.jpg" alt="">
+				</div>
+				<div class="text-container">
+					<span class="name">Vanilla Slice</span>
+					<span class="price">NGN 800</span>
+					<div class="quantity">
+						<i class="fa-regular fa-plus increment"></i>
+						<span class="value">2</span>						
+						<i class="fa-solid fa-minus decrement"></i>
+					</div>
+					<span class="subtotal">NGN 1600</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<script src="js/jquery-3.6.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

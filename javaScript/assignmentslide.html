@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/fontawesome-free-6.2.0-web/css/all.css">
+    <style>
+
+        /* *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        } */
+
+        #img{
+			
+			width: 300px;
+			height: 200px;
+			border: 1px solid #ccc;
+			padding: 10px;
+			text-align: center;
+            position: relative;
+			
+
+		}
+
+		#img img{
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+		}
+
+		.fa-solid{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: deeppink;
+            color: white;
+            text-align:center;
+            line-height: 50px;
+            position:absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
+        }
+        #left{
+            left: 30px;
+        }
+
+        #right{
+            right: 30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+<div id="img">
+    <img src="../WEB DEV PROJECT/MEDIA/IMAGES/slideshow1.jpg" alt="">
+    <button id="left" class="fa-solid fa-arrow-left"></button>
+    <button id="right" class="fa-solid fa-arrow-right"></button>
+  </div>
+  
+
+    <script>
+        const images = ["../WEB DEV PROJECT/MEDIA/IMAGES/slideshow1.jpg", "../WEB DEV PROJECT/MEDIA/IMAGES/slideshow2.jpg","../WEB DEV PROJECT/MEDIA/IMAGES/slideshow3.jpg" ];
+        let currentIndex = 0;
+
+        function slideshowright() {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+        document.querySelector("#img img").src = images[currentIndex];
+        }
+
+        function slideshowleft() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        }
+        document.querySelector("#img > img").src = images[currentIndex];
+
+        }
+
+        document.querySelector("#right").onclick = slideshowright;
+        document.querySelector("#left").onclick = slideshowleft;
+
+    </script>
+</body>
+</html>

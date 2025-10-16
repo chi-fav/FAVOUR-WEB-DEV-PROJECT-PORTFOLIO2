@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists and Tables</title>
+    <style>
+
+        *{
+            padding:0px;
+        }
+        ul{
+            list-style-type:lower-greek;
+            font-family: 'Courier New', Courier, monospace;
+            padding-left: 20px;
+        }
+
+        ul li{
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: yellowgreen;
+        }
+
+        #tablecontainer{
+            
+            overflow-x: auto;
+        }
+
+        table{
+            /* border: 1px solid #000;
+            /* border-spacing: ; */
+            /* width: 100%; */
+            min-width: 654px;
+            border-collapse: collapse;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           
+        }
+
+        th, td{
+            /* border: 1px solid #000; */
+            padding: 10px 40px;
+        }
+
+         tr:first-child{
+            background-color: #000;
+
+        }
+
+        th{
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: normal;
+        }
+
+        tr:nth-child(even){
+            background-color: #d1cfcf;
+            
+        }
+
+        tr:hover:not(tr:first-child){
+            background-color: aliceblue;
+        }
+
+        /* tr:nth-child(odd):not(tr:first-child){
+            background-color: lightpink;
+            
+        } */
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Uno</li>
+        <li>Dos</li>
+        <li>Tres</li>
+        <li>Cuatro</li>
+        <li>Cinco</li>
+    </ul>
+
+  
+
+
+    <div id="tablecontainer">
+
+        <table>
+            <tr>
+                <th>SN</th>
+                <th>Title</th>
+                <th>Realease Year</th>
+                <th>Genre</th>
+                
+            </tr>
+    
+            <tr>
+                <td>1</td>
+                <td>Home Alone</td>
+                <td>1995</td>
+                <td>Action, Thriller, Comedy</td>
+    
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>The Expendibles 1</td>
+                <td>2013</td>
+                <td>Action, Thriller</td>
+            </tr>
+    
+            <tr>
+                <td>3</td>
+                <td>Jumanji</td>
+                <td>2017</td>
+                <td>Adventure</td>
+            </tr>
+    
+            <tr>
+                <td>4</td>
+                <td>The Conjuring</td>
+                <td>2013</td>
+                <td>Horror</td>
+            </tr>
+    
+            
+           
+        </table>
+
+    </div>
+</body>
+</html>

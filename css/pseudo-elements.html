@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        h1::before{
+            content: 'Welcome to ';
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        h1::after{
+            content:  ' Tutorials ';
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        p::selection{
+            background-color: lightgreen;
+        }
+
+        ul li::marker{
+            content: '+ ';
+            font-weight: bold;
+            color: chartreuse;
+
+        }
+
+        input::placeholder{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Pseudo Elements</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo magni, totam quos, laborum eaque delectus placeat perferendis beatae qui impedit vero ea ducimus recusandae blanditiis amet maiores fugit numquam omnis!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae quo ab, explicabo, repudiandae quidem dolore aut tempore sit eius corrupti voluptatum maxime vel nesciunt quisquam deleniti nam aperiam dolor placeat.
+    </p>
+
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+    </ul>
+
+    <form action="">
+        <input type="text" placeholder="Enter your Email">
+        <button>Sign up for our newsletter</button>
+    </form>
+</body>
+</html>

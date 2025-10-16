@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions and Transforms</title>
+    <style>
+        .items{
+            display: flex;
+            gap: 20px;
+        }
+
+        .item{
+            width: 25%;
+        }
+
+        .items .img{
+            background-color: lightcoral;
+            height: 100px;
+            width: 100%;
+            display: block;
+        }
+
+        .item:first-child .img:hover{
+            transform: rotate(360deg);
+            /* transition-property: transform;
+            transition-duration: .4s;
+            transition-timing-function: ease-in;
+            transition-delay: .2s; */
+
+            transition: transform .4s ease, 
+                        background-color .4s ease-out .6s;
+            background-color: aqua;
+
+        }
+
+        .item:nth-child(2) .img:hover{
+            transform: scale(1.2);
+            transition: all .4s ease-in;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="items">
+        <div class="item">
+            <span class="img"></span>
+            <span class="text">Text here</span>
+        </div>
+        <div class="item">
+            <span class="img"></span>
+            <span class="text">Text here</span>
+        </div>
+        <div class="item">
+            <span class="img"></span>
+            <span class="text">Text here</span>
+        </div>
+        <div class="item">
+            <span class="img"></span>
+            <span class="text">Text here</span>
+        </div>
+    </section>
+</body>
+</html>l

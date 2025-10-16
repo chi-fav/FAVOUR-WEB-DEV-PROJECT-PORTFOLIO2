@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.2.0-web/css/all.css">
+    <title>CSS Positioning</title>
+    <style>
+        body{
+            height: 200vh;
+        }
+        p{
+            border: 2px solid lightblue;
+        }
+
+        #p1 span{
+            background-color: aqua;
+            position: relative;
+            left: 20px;
+            bottom: 30px;
+        }
+
+        #p2{
+            position: relative;
+        }
+
+        #p2 span{
+            background-color: lightpink;
+            position: absolute;
+            
+        }
+
+        .fa-bell{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: deeppink;
+            color: white;
+            text-align:center;
+            line-height: 50px;
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            font-size: 1.5rem;
+
+        }
+
+        .fa-close{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: deeppink;
+            color: white;
+            text-align:center;
+            line-height: 50px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            font-size: 1.5rem;
+
+        }
+
+        h2{
+            position:sticky;
+            top: 0;
+            background-color: white;
+            z-index: 10000;
+        }
+
+        #p3{
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS Positioning </h1>
+    <p id="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum accusantium, dolore ipsam omnis autem sint, atque perferendis nemo ex, iure molestiae ad necessitatibus nulla optio quibusdam facilis sed vitae porro.
+        Lorem ipsum dolor sit amet consectetur <span> porro qui! Lorem ipsum </span> adipisicing elit. Nisi voluptatum amet harum veniam reprehenderit magni asperiores iure culpa error labore. A ipsam dolorem autem, id quae corporis eos fugiat ducimus!
+    </p>
+
+    <p id="p2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita accusantium odit autem, consectetur quas ut sint totam! Tenetur quisquam, incidunt id similique, autem voluptatum commodi impedit a sit <span> porro qui! Lorem ipsum </span>  dolor sit amet consectetur adipisicing elit. Iusto officiis placeat eaque itaque unde officia quibusdam dicta quae nesciunt pariatur labore ex, perferendis ut. Labore libero laudantium quidem delectus maiores?
+    </p>
+
+    <h2>Sticky Heading</h2>
+    <p id="p3">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita accusantium odit autem, consectetur quas ut sint totam! Tenetur quisquam, incidunt id similique, autem voluptatum commodi impedit a sit porro qui! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis placeat eaque itaque unde officia quibusdam dicta quae nesciunt <span> porro qui! Lorem ipsum </span> pariatur labore ex, perferendis ut. Labore libero laudantium quidem delectus maiores?
+    </p>
+
+    <div id="notificationLink">
+        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-close "></i>
+    </div>
+</body>
+</html>

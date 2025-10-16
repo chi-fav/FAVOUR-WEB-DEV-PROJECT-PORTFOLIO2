@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Manipulation</title>
+    <link rel="stylesheet" href="../css/fontawesome-free-6.2.0-web/css/all.css">
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        h1{
+            
+        }
+
+        li{
+            display: flex;
+            gap: 5px;
+        }
+        .purchased-btn{
+            color: lightgreen;
+        }
+        .delete-btn{
+            color: red;
+        }
+
+        form{
+            display: inline-block;
+        }
+
+        #clear{
+            display: inline;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>MY SHOPPING LIST</h1>
+    <form>
+        <label for="itemField">Enter item</label>
+        <input type="text" id="itemField" />
+        <button id="add">Add</button>
+             
+    </form>
+    <button id="clear">Clear</button>
+
+    <ul id="shoppingList"></ul>
+
+    <script>
+        const itemField = document.querySelector("#itemField");
+        const form = document.forms[0]
+        const shoppingList = document.querySelector("#shoppingList");
+        
+
+        form.onsubmit = function(ev){
+            ev.preventDefault();
+
+            let itemValue = itemField.value;
+            if(itemValue === "")
+                return;
+
+            const shoppingItem = document.createElement("li")
+            const itemName = document.createElement("span")
+            itemName.textContent = itemValue;
+            shoppingItem.append(itemName);
+
+            const purchasedBtn = document.createElement("button");
+            purchasedBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+            purchasedBtn.classList.add("btn","purchased-btn");
+            shoppingItem.append(purchasedBtn);
+            
+            const deleteBtn = document.createElement("button");
+            deleteBtn.innerHTML = `<i class="fa-regular fa-trash-can"></i>`;
+            deleteBtn.classList.add("btn","delete-btn");
+            shoppingItem.append(deleteBtn);
+            
+            purchasedBtn.onclick = function(){
+                this.remove();
+                deleteBtn.remove();
+                itemName.style.textDecoration="line-through";
+            };
+            deleteBtn.onclick = function(){
+                shoppingItem.remove();
+            }
+            shoppingList.append(shoppingItem);
+            itemField.value = ""
+        };
+
+        const clearBtn = document.querySelector("#clear");
+        clearBtn.onclick = function(){
+            document.querySelector("#shoppingList").textContent="";
+            itemField.value = ""
+                
+            };
+        
+    </script>
+</body>
+</html>

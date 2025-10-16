@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex Box</title>
+    <style>
+        main{
+            display: flex;
+            
+        }
+
+        section#catalog{
+            flex-basis:75% ;
+
+        }
+        section#nav{
+            flex-basis: 25%;
+            border: solid black;
+            order: -1;
+        }
+        section#catalog #items{
+            display: flex;
+            overflow: auto;
+            flex-wrap: wrap;
+            gap:10px;
+
+        }
+
+        section#catalog .item{
+            flex-basis: calc((100% - 30px) / 4);
+            height: 100px;
+            background-color: lightblue;
+            /* margin: 10px;
+            flex-shrink: 0;
+            flex-grow: 1; */
+
+        }
+
+        section#catalog .item:first-child{
+            /* flex-grow: 3; */
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>E-Store</h1>
+    <main>
+        <section id="catalog">
+            <h2>Trending items</h2>
+            <div id="items">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </section>
+
+        <section id="nav">
+            <h2>Categories</h2>
+            <nav>
+                <ul>
+                    <li>Electronics</li>
+                    <li>Household Wares</li>
+                    <li>Clothing</li>
+                    <li>Jewelry</li>
+                </ul>
+            </nav>
+        </section>
+
+       
+    </main>
+</body>
+</html>

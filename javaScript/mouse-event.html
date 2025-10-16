@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Events Example</title>
+<style>
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 20px;
+        background-color: lightblue;
+        border: 2px solid blue;
+        cursor: pointer;
+    }
+    .inner-button {
+        padding: 5px 10px;
+        background-color: lightgreen;
+        border: 2px solid green;
+    }
+</style>
+</head>
+<body>
+
+<div class="button" id="outerButton">
+    Outer Button
+    <div class="inner-button" id="innerButton">
+        Inner Button
+    </div>
+</div>
+
+<script>
+    const outerButton = document.getElementById('outerButton');
+    const innerButton = document.getElementById('innerButton');
+
+    outerButton.addEventListener('mouseenter', function() {
+        console.log('Mouse entered outer button');
+    });
+
+    innerButton.addEventListener('mouseenter', function() {
+        console.log('Mouse entered inner button');
+    });
+
+    outerButton.addEventListener('mouseleave', function() {
+        console.log('Mouse left outer button');
+    });
+
+    innerButton.addEventListener('mouseleave', function() {
+        console.log('Mouse left inner button');
+    });
+
+    outerButton.addEventListener('mouseover', function() {
+        console.log('Mouse over outer button');
+    });
+
+    innerButton.addEventListener('mouseover', function() {
+        console.log('Mouse over inner button');
+    });
+
+    outerButton.addEventListener('mouseout', function() {
+        console.log('Mouse out of outer button');
+    });
+
+    innerButton.addEventListener('mouseout', function() {
+        console.log('Mouse out of inner button');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Forms</title>
+    <style>
+        :root{
+            --primary: #0b5ad9;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        
+        section#login{
+            padding: 50px;
+            border-right: 20px solid var(--primary);
+        }
+
+        h1{
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        .form-field{
+            margin-bottom: 25px;
+
+        }
+
+        .form-field label{
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: rgba(0, 0, 0,.6);
+            letter-spacing: 1px;
+            margin-bottom: 7px;
+        }
+
+        .form-field input{
+            display: block;
+            border: none;
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0,.15);
+            width: 100%;
+            height: 40px;
+        }
+        
+        .extras #rememberMe{
+            display: inline-block;
+            width: 49%;
+        }
+        
+        .extras #forgottenPassword{
+            display: inline-block;
+            width: 49%;
+            text-align: right;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .extras{
+            margin-bottom: 20px;
+        }
+
+        button{
+            display: block;
+            width: 100%;
+            background-color:var(--primary);
+            color: white;
+            height: 40px;
+            border: none;
+            border-radius: 3px;
+            transition-timing-function: ease;
+            transition-property: background-color; 
+            transition-duration: 0.3s;
+            transition-property: opacity:0 ;
+            transition-duration: .03s; 
+            transition-timing-function: ease-out;
+            transition-delay: 2s;
+        }
+
+        button:hover, button:focus{
+        
+            box-shadow: 5px 5px 10px rgba(17, 27, 169, 0.5); 
+            transition-property: box-shadow; 
+            /* transition-duration: 0.3s;  */
+             
+        }
+
+         
+        button:active { 
+        opacity: 0;
+        } 
+
+
+
+    </style>
+</head>
+<body>
+    <section id="login">
+        <h1>Account Login</h1>
+        <form action="">
+            <div class="form-field">
+                <label for="username">Username</label>
+                <input type="text" id="username">
+            </div>
+
+            <div class="form-field">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+
+            <div class="extras">
+                <div id="rememberMe">
+                    <input type="checkbox" id="rememberMeBox">
+                    <label for="rememberMeBox">Remember me</label>
+                </div>
+                <a href="#" id="forgottenPassword">Forgotten password?</a>
+             </div>
+             <button>
+                Login
+             </button>
+        </form>
+    </section>
+
+    <a href="" class="smooth">awesomesauce</a>
+</body>
+</html>

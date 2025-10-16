@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Amy Beauty</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            border: none;
+            --primary-color: #F73F8C;
+        }
+
+        body {
+            background: url(../../NetBeansProjects/AmyBeauty/src/AMY\ RECIPE.png);
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+            background-position: 75% 25%;
+            font-family: "Tw-cent", sans-serif;
+            font-size: 16px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10%;
+        }
+
+        #logo img {
+            width: 100%;
+        }
+
+        #logo {
+            width: 40%;
+            margin-top: 11%;
+
+        }
+
+        #loginform {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: 10%;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2%;
+
+        }
+
+        .inputfield {
+            width: 100%;
+            display: block;
+            padding: 2%;
+            border-radius: 7px;
+            border: 2px solid var(--primary-color);
+            outline: none;
+        }
+
+        .inputfield::placeholder {
+            border: 2px solid #F73F8C;
+        }
+
+
+        #loginbtn {
+            padding: 2%;
+            width: 30%;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 7px;
+            display: block;
+            margin-top: 2%;
+
+        }
+
+        #checkboxcontainer {
+            display: flex;
+            flex-direction: row;
+            width: 70%;
+            align-items: center;
+            justify-content: center;
+            gap: 5%;
+            font-size: 15px;
+            color: var(--primary-color);
+            background-color: var(--primary-color);
+            padding: 5px;
+            border-radius: 7px;
+            margin-top: 3%;
+        }
+
+        #checkboxcontainer label {
+            color: white;
+            margin-top: 4px;
+        }
+
+        #checkboxcontainer div {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        #checkboxcontainer input[type="radio"] {
+            appearance: none;
+            width: 17px;
+            height: 17px;
+            border-radius: 28%;
+            background-color: white;
+            border: 2px solid var(--primary-color);
+            cursor: pointer;
+            margin-top: 2px;
+            margin-bottom: none;
+            top: 80px;
+        }
+
+        #checkboxcontainer input[type="radio"]:checked::after {
+            content: "";
+            display: block;
+            width: 7px;
+            height: 7px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            position: relative;
+            top: 3px;
+            left: 3px;
+        }
+
+
+
+
+
+        #status {
+            background-color: white;
+            padding: 4px;
+            color: var(--primary-color);
+            border-radius: 7px;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="logo">
+        <img src="../../NetBeansProjects/AmyBeauty/src/loginLogo.png" alt="">
+    </div>
+
+    <form action="login" method="post" enctype="multipart/form-data" id="loginform">
+        <input type="text" id="userName" class="inputfield" name="userName" placeholder="Username" />
+        <input type="password" id="password" class="inputfield" name="password" placeholder="Password" />
+
+        <div id="checkboxcontainer">
+            <span id="status">Status</span>
+            <div>
+                <input type="radio" id="admin" name="status" />
+                <label for="admin">Admin</label>
+            </div>
+            <div>
+                <input type="radio" id="editor" name="status" />
+                <label for="editor">Editor</label>
+            </div>
+            <div>
+                <input type="radio" id="contributor" name="status" />
+                <label for="contributor">Contributor</label>
+            </div>
+        </div>
+
+        <button id="loginbtn">Login</button>
+    </form>
+</body>
+
+</html>

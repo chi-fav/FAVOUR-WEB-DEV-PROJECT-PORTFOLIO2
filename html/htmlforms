@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms HTML</title>
+</head>
+<body>
+    <h1>Forms</h1>
+    <form action="">
+        <div>
+            <label for="fname">First name: </label>
+            <input type="text" placeholder="Enter first name..." id="fname">
+        </div>
+        <div>
+            <label for="lname">Last Name: </label>
+            <input type="text" placeholder="Enter last name..." id="lname">
+        </div>
+        <div>
+            <label for="pass">Password</label>
+            <input type="password"  id="pass" required>
+        </div>
+        <div>
+            <label for="">Phone: </label>
+            <input type="tel" placeholder="(0) (789) (01) (12345678)" id="" required maxlength="11">
+        </div>
+        <div>
+            <label for="">Gender</label>
+            <br>
+            <input type="radio" name="gender">
+            <label for="">Male</label>
+
+            <input type="radio" name="gender">
+            <label for="">Female</label>
+
+            <input type="radio" name="gender">
+            <label for="">Others</label>
+        </div>
+        <div>
+            <label for="">Payment</label>
+            <select name="" id="">
+                <option value="">Visa</option>
+                <option value="">Verve</option>
+                <option value="">Master</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Subscribe</label>
+            <input type="checkbox">
+        </div>
+        <div>
+            <label for="">Comment</label>
+            <textarea name="" id="" cols="30" rows="10" placeholder="write comment here..."></textarea>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+</body>
+</html>

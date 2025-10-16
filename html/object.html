@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object</title>
+</head>
+<body>
+
+    <script>
+        const car = {
+            make:"Ford", 
+            model:"Explorer",
+            year:2024,
+            fuelLevel: 0,
+            topFuel: function(litres)
+            {
+                this.fuelLevel+=litres;
+            }
+        };
+        let prop = "year";
+        console.log(car.make, car["model"], car[prop]);
+        console.log("initial fuel level:", car.fuelLevel);
+        car.topFuel(20)
+        console.log("new fuel level:", car.fuelLevel)
+
+        for(let pr in car)
+        {
+            console.log(car[pr])
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery Shopping List</title>
+</head>
+<body>
+	<h1>My Shopping List</h1>
+	<form id="shoppingListForm">
+		<label for="itemName">Enter item</label>
+		<input type="text" id="itemName">
+		<button>Add Item</button>
+		<span class="error"></span>
+	</form>
+	<ul id="shoppingList"></ul>
+
+	<script src="jquery-3.6.1.min.js"></script>
+	<script>
+		// $(document).ready(function(){
+
+		// });
+		$(function(){
+			const shoppingList = $("#shoppingList");
+			const itemField = $("input#itemName");
+
+			$("#shoppingListForm").submit(function(event){
+				event.preventDefault();
+
+				let itemName = itemField.val();
+
+				if(!itemName) // if the field is empty
+				{
+					$(".error")
+						.text("Please enter a shopping item")
+						.css("color", "red");
+					return;
+				}
+
+				$(".error").text("");
+
+				addItem(itemName, false, true);
+
+				itemField.val("");
+			});
+
+			// LOAD EXISTING SHOPPING LIST
+			let shoppingListData = [];
+
+			if(localStorage.getItem("shoppingListData") !== null)
+				shoppingListData = JSON.parse(localStorage.getItem("shoppingListData"));
+
+			shoppingListData.forEach(shoppingItem => {
+				addItem(shoppingItem.name, shoppingItem.purchased, false);
+			});
+
+			function addItem(itemName, purchased, isNew)
+			{
+				const listItem = $("<li></li>");
+				const listItemName = $("<span></span>").text(itemName);
+
+				if(purchased)
+				{
+					listItemName.css("text-decoration", "line-through");
+
+					listItem.append(listItemName);
+					shoppingList.append(listItem);
+
+					return;
+				}
+
+				const purchasedButton = $("<button></button>").text("Purchased");
+				const deleteButton = $("<button></button>").text("Delete");
+
+				purchasedButton.click(function(){
+					listItemName.css("text-decoration", "line-through");
+					$(this).remove();
+					deleteButton.remove();
+
+					// update the shopping list 
+					let itemIndex = shoppingListData.findIndex(function(value){
+						return itemName === value.name;
+					});
+					
+					shoppingListData[itemIndex].purchased = true;
+					saveShoppingList(shoppingListData);
+				});
+
+				deleteButton.click(function(){
+					listItem.remove();
+
+					// update the shopping list
+					let itemIndex = shoppingListData.findIndex(function(value){
+						return itemName === value.name;
+					});
+					shoppingListData.splice(itemIndex, 1);
+					saveShoppingList(shoppingListData);
+				});
+
+				if(isNew)
+					shoppingListData.push({"name": itemName, "purchased": false});
+					saveShoppingList(shoppingListData);
+
+				listItem.append(listItemName, purchasedButton, deleteButton);
+				shoppingList.append(listItem);
+			}
+		
+			function saveShoppingList(shoppingListData)
+			{
+				localStorage.setItem("shoppingListData", 
+					JSON.stringify(shoppingListData));
+			}
+		});
+	</script>
+</body>
+</html>
+<!-- [
+	{
+		"name": "Sugar",
+		"purchased": true
+	},
+	{
+		"name": "Salt",
+		"purchased": false
+	}
+] -->

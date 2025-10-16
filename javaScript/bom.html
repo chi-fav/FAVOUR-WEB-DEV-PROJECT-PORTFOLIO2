@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Browser Object Model</title>
+
+	<style>
+		#customAlert{
+			width: 300px;
+			padding: 50px;
+			position: absolute;
+			top: -190px;
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 10px;
+			box-shadow: 0 0 5px rgba(0,0,0,.2);
+			/* display: none; */
+			transition: all .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+		}
+		#customAlert.show{
+			/* display: block; */
+			top: 5px;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<button id="locationAssign">Visit AirBnB</button>
+	<button id="historyBack">Go back</button>
+	<div>
+		<button id="alertBtn">Alert</button>
+		<button id="confirmBtn">Confirm</button>
+		<button id="promptBtn">Prompt</button>
+	</div>
+	<div>
+		<button id="showAlert">Show Alert</button>
+	</div>
+
+	<div id="customAlert">
+		<p>
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas vitae quisquam et itaque aut atque.
+		</p>
+	</div>
+
+	
+	<script>
+		console.log("Screen object");
+		console.log(`Screen size: ${screen.width}px by ${screen.height}px`);
+		console.log(`Screen available size: ${screen.availWidth}px by ${screen.availHeight}px`);
+
+		console.log("\nLocation object");
+		console.log(`Current URL: ${location.href}`);
+		document.querySelector("#locationAssign").onclick = function(){
+			location.assign("https://airbnb.com");
+		}
+
+		console.log("\nHistory object")
+		console.log("History length: " + history.length);
+		document.querySelector("#historyBack").onclick = function(){
+			// history.back();
+			history.go(-1);
+		}
+
+		document.querySelector("#alertBtn").onclick = function(){
+			alert("Hello there");
+		};
+		document.querySelector("#confirmBtn").onclick = function(){
+			let loveJS = confirm("Do you love JS programming?");
+			alert(loveJS ? "You rock!" : "Try Python");
+		};
+		document.querySelector("#promptBtn").onclick = function(){
+			let answer = prompt("What's your nickname?");
+			alert("Hello " + answer);
+		};
+		document.querySelector("#showAlert").onclick = function(){
+			document.querySelector("#customAlert").classList.toggle("show");
+		};
+
+		window.setTimeout(function(){			
+			let loveJS = confirm("Do you love JS programming?");
+			alert(loveJS ? "You rock!" : "Try Python");	
+		}, 5000);
+
+		
+
+	</script>
+</body>
+</html>

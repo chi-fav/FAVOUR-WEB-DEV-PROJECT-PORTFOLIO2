@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolpcation API</title>
+</head>
+<body>
+    
+    <script>
+        const positionStatus = document.querySelector("p");
+
+        document.querySelector("button").onclick = function(){
+            if (navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+
+            }
+
+            else
+            {
+                positionStatus.textContent = "Geolocation not suported";
+            }
+        };
+
+        function showPosition(position){
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+
+            positionStatus.textContent = 
+            `Your current position is latitude ${lat} and longitude ${lon}`
+        }
+
+        function showError(error){
+            switch(error.code)
+            {
+                case error.PERMISSION_DENIED:
+                    positionStatus.textContent = "User denied geolocation request";
+                    break;
+                    
+                case error.TIMEOUT:
+                    positionStatus.textContent = "Geolocation request timed out";
+                    break;
+                    
+                default:
+                    positionStatus.textContent = "Could not retrieve position";
+            }
+        }
+    </script>
+</body>
+</html>

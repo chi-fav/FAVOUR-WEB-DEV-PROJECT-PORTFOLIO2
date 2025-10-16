@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Canvas Graphics</title>
+	<style>
+		canvas{
+			border: 1px solid lightgray;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="500" height="500"></canvas>
+	<canvas id="myCanvas2" width="300" height="300"></canvas>
+
+	<script>
+		const canvas = document.querySelector("#myCanvas");
+		const ctx = canvas.getContext("2d");
+
+		ctx.strokeStyle = "rgba(0, 0, 0, .3)";
+		for(let x = 0; x <= 500; x += 10)
+		{
+			ctx.beginPath();
+			ctx.moveTo(x, 0);
+			ctx.lineTo(x, 500);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.moveTo(0, x);
+			ctx.lineTo(500, x);
+			ctx.stroke();
+		}
+
+		ctx.fillStyle = "magenta";
+		ctx.fillRect(10, 10, 80, 80);
+
+		ctx.strokeStyle = "magenta";
+		ctx.strokeRect(50, 50, 80, 80);
+
+		ctx.beginPath();
+		ctx.moveTo(220, 10);
+		ctx.lineTo(300, 50);
+		ctx.lineTo(220, 90);
+		ctx.lineTo(140, 50);
+		ctx.fill();
+
+		ctx.beginPath();
+		ctx.lineWidth = 5;
+		ctx.fillStyle = "yellow";
+		ctx.arc(250, 250, 100, 0, Math.PI * 2, false);
+		ctx.fill();
+	</script>
+
+	<script>
+		const canvas2 = document.querySelector("#myCanvas2");
+		const ctx2 = canvas2.getContext("2d");
+
+		ctx2.moveTo(130, 10);
+		ctx2.bezierCurveTo(40, 50, 40, 120, 130, 160);
+		ctx2.stroke();
+
+		ctx2.moveTo(130, 10);
+		ctx2.bezierCurveTo(80, 50, 80, 120, 130, 160);
+		ctx2.stroke();
+
+		ctx2.font = "36px serif";
+		ctx2.strokeText("Crescent Moon", 20, 210);
+	</script>
+</body>
+</html>

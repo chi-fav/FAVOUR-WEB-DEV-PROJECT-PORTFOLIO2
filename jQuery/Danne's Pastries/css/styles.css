@@ -1,0 +1,235 @@
+:root{
+	--accent1: #bae8d4;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	/* background-color: #000; */
+}
+a{
+	text-decoration: none;
+}
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* PICK UP LINK STYLES */
+#pickUpLink{
+	background-color: #000;
+	display: flex;
+	justify-content: center;
+	padding: 3px 0 5px;
+}
+#pickUpLink a{
+	color: #fff;
+	transition: all .2s;
+	font-size: 0.9rem;
+}
+#pickUpLink a:hover{
+	color: var(--accent1)	;
+}
+
+
+/* MAIN NAV STYLES  */
+nav#main{
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+nav#main .container{
+	display: flex;
+	padding: 20px 10px;
+	justify-content: space-between;
+	position: relative;
+}
+
+nav#main .logo{
+	position: absolute;
+	left: 50%;
+	bottom: -54.4px;
+	transform: translateX(-50%);
+}
+nav#main .logo img{
+	width: 115px;
+	height: 115px;
+}
+
+nav#main section{
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+nav#main .nav-links{
+	color: #000;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	transition: all .2s;
+}
+nav#main .nav-links:hover{
+	color: var(--accent1);
+}
+nav#main .nav-links i{
+	margin-left: 3px;
+}
+
+#puddingClubLink{
+	background-color: #e7cbef;
+	padding: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	border: 2px solid #e7cbef;
+	transition: all .2s;
+	margin: 0 12px;
+}
+#puddingClubLink:hover{
+	background-color: #43234c;
+}
+#puddingClubLink a{
+	display: block;
+	width: 120%;
+	background-color: #e7cbef;
+	color: #43234c;
+	flex-shrink: 0;
+	text-align: center;
+	border-radius: 20px;
+	padding: 8px 12px;
+	border-left: 2px solid #e7cbef;
+	border-right: 2px solid #e7cbef;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	font-weight: bold;
+	transition: all .2s;
+}
+#puddingClubLink:hover a{
+	background-color: #43234c;
+	color: #e7cbef;
+}
+
+nav#main .icons{
+	display: flex;
+	gap: 10px;
+}
+nav#main .icons > *{
+	color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 35px;
+	height: 35px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	padding-top: 5px;
+}
+
+/* MAIN STYLES  */
+
+main .container{
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+/* CATEGORIES STYLES */
+
+section#categories{
+	padding: 5px 20px;
+}
+section#categories h2{
+	margin-bottom: 30px;
+}
+section#categories ul li{
+	list-style-type: none;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	font-size: 1.05rem;
+	padding: 8px 5px;
+	cursor: pointer;
+}
+
+/* CATALOG STYLES */
+
+section#catalog{
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	padding: 0 20px;
+}
+section#catalog .product{
+	width: calc((100% - 40px) / 3);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+section#catalog .product .img-container{
+	/* margin-bottom: 15px; */
+	border-radius: 15px;
+	overflow: hidden;
+}
+section#catalog .product img{
+	display: block;
+	width: 100%;
+	transition: all .5s;
+}
+section#catalog .product:hover img{
+	transform: scale(1.05);
+}
+section#catalog .product .name{
+	display: block;
+	font-size: 1.2rem;
+	margin-bottom: auto;
+}
+section#catalog .product .price{
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 10px;
+}
+section#catalog .product button{
+	display: block;
+	border: 1px solid #e7cbef;
+	padding: 5px 10px;
+	border-radius: 10px;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+/* CART SECTION STYLES */
+
+section#cart{
+	position: fixed;
+	top: 0;
+	right: -500px;
+	height: 100vh;
+	width: 500px;
+	background-color: #fff;
+	padding: 30px;
+	transition: all .3s;
+	z-index: 3;
+}
+section#cart.showing{
+	right: 0;
+}
+section#cart .close-btn{
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	cursor: pointer;
+	font-size: 1.5rem;
+}
+section#cart header{
+	display: flex;
+	justify-content: space-between;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	margin: 20px 0 30px;
+}
+
+section#cart .cart-item img{
+	width: 100px;
+}

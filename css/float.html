@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Floating</title>
+    <style>
+        main > section{
+            float: left;
+        }
+
+        section#catalog{
+            width: 75%
+        }
+  
+        
+        section#catalog .item{
+           background-color: rgb(96, 27, 27);
+           width: calc(25% - 20px);
+           height: 100px;
+           margin: 10px;
+           float: left;
+        }
+
+        section#nav{
+            width: 25%
+        }
+
+    </style>
+</head>
+<body>
+    <h1>E-Store</h1>
+    <main>
+        <section id="catalog">
+            <h2>Trending items</h2>
+            <div id="items">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </section>
+
+        <section id="nav">
+            <h2>Categories</h2>
+            <nav>
+                <ul>
+                    <li>Electronics</li>
+                    <li>Household Wares</li>
+                    <li>Clothing</li>
+                    <li>Jewelry</li>
+                </ul>
+            </nav>
+        </section>
+
+       
+    </main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Font Properties</title>
+    <style>
+        body{
+            font-family: "Ariel","poppins",sans-serif;
+        }
+
+        h1, h2{
+            font-family: Georgia, "Times New Roman", serif;
+        }
+        
+        /* header span
+        header>span
+        h1+span */
+
+        #author{
+            font-weight: bold;
+       }
+
+       p#intro{
+        font-style: italic;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+       }
+
+       a.smooth{
+        display: block; 
+        text-decoration:none; 
+        text-align: center;
+        padding: 1em 2em; 
+        width: 10em;
+        border-radius: 1.5em;
+        color: #fff; 
+        background-color: mediumblue; 
+        transition-property: background-color; 
+        transition-duration: 0.3s;
+        }
+        
+        a.smooth:hover, a.smooth:focus { 
+        background-color: red; 
+        transition-property: background-color; 
+        /* transition-duration: 0.3s;  */
+        transition-timing-function: ease;
+         }
+
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cascading Style Sheet</h1>
+        <span id="author">by John Doe</span> 
+    </header> 
+
+    <p id="intro">
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut et modi eos dolorum ab sed voluptate provident assumenda quidem nulla nobis eaque iure inventore, nihil nam vero accusamus consequatur sapiente.
+    </p>
+
+    <section id="History">
+        <h2>History</h2>
+        <p >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laborum, praesentium saepe debitis similique placeat sunt maxime deleniti omnis, et, soluta minima vitae assumenda! Voluptatibus sapiente soluta expedita deserunt pariatur?
+           </p>
+    </section>
+
+    <a href="" class="smooth">awesomesauce</a>
+
+
+
+
+</body>
+   
+</html>
